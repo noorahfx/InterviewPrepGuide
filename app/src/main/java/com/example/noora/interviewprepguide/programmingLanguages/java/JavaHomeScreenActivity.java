@@ -1,31 +1,36 @@
-package com.example.noora.interviewprepguide;
+package com.example.noora.interviewprepguide.programmingLanguages.java;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.noora.interviewprepguide.R;
 import com.example.noora.interviewprepguide.adapter.MyAdapter;
-import com.example.noora.interviewprepguide.model.LanguageData;
 import com.example.noora.interviewprepguide.dataGenerator.ProgrammingLanguageGenerator;
+import com.example.noora.interviewprepguide.model.LanguageData;
+import com.example.noora.interviewprepguide.programmingLanguages.java.adapter.JavaAdapter;
+import com.example.noora.interviewprepguide.programmingLanguages.java.dataGenerator.JavaTopicsGenerator;
 
 import java.util.List;
 
-public class HomePageActivity extends AppCompatActivity {
+public class JavaHomeScreenActivity extends AppCompatActivity {
 
     private List<LanguageData> list;
-    private MyAdapter adapter;
+    private JavaAdapter adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
+        setContentView(R.layout.activity_java_home_screen);
+
 
         //Linkinng adapter with RecyclerView
 
-        this.list = ProgrammingLanguageGenerator.createProgrammingLanguageData();
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        adapter = new MyAdapter(this, list);
+        this.list = JavaTopicsGenerator.createJavaTopicsGenerator();
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rv_java_home);
+        adapter = new JavaAdapter(this, list);
         recyclerView.setAdapter(adapter);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
