@@ -15,11 +15,11 @@ public class ProgrammingLanguageGenerator {
         List<LanguageData> list = new ArrayList<>();
 
         list.add(new LanguageData(R.drawable.java, "Java"));
-        list.add(new LanguageData(R.drawable.java, "Database"));
-        list.add(new LanguageData(R.drawable.java, "C++"));
-        list.add(new LanguageData(R.drawable.java, "C"));
-        list.add(new LanguageData(R.drawable.java, "HTML"));
-        list.add(new LanguageData(R.drawable.java, "Python"));
+        list.add(new LanguageData(R.drawable.database, "Database"));
+        list.add(new LanguageData(R.drawable.cplusplus, "C++"));
+        list.add(new LanguageData(R.drawable.c, "C"));
+        list.add(new LanguageData(R.drawable.html, "HTML"));
+        list.add(new LanguageData(R.drawable.python, "Python"));
 
         return list;
     }

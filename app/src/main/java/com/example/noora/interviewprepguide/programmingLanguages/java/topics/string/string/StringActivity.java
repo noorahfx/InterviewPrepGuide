@@ -1,15 +1,20 @@
 package com.example.noora.interviewprepguide.programmingLanguages.java.topics.string.string;
 
+import android.graphics.Typeface;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.noora.interviewprepguide.R;
+import com.example.noora.interviewprepguide.font.FontClass;
 import com.example.noora.interviewprepguide.model.TopicData;
 
 import java.util.List;
+
+import static com.example.noora.interviewprepguide.R.id.tv_question;
 
 public class StringActivity extends AppCompatActivity {
     StringAdapter adapter;
@@ -27,9 +32,11 @@ public class StringActivity extends AppCompatActivity {
         viewPager = (ViewPager)findViewById(R.id.view_pager);
 
 
+
         adapter = new StringAdapter(this, list);
 
         viewPager.setAdapter(adapter);
+
 
 
         leftNav = (ImageButton)findViewById(R.id.left_nav);
@@ -51,4 +58,7 @@ public class StringActivity extends AppCompatActivity {
             }
         });
     }
+
+
+
 }

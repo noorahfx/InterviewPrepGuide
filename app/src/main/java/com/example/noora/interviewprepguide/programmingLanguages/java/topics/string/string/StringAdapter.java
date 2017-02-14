@@ -1,6 +1,8 @@
 package com.example.noora.interviewprepguide.programmingLanguages.java.topics.string.string;
 
 import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -10,8 +12,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.noora.interviewprepguide.R;
+import com.example.noora.interviewprepguide.font.FontClass;
 import com.example.noora.interviewprepguide.model.TopicData;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Type;
 import java.util.List;
 
 /**
@@ -28,13 +34,14 @@ public class StringAdapter extends PagerAdapter {
     private TextView tv_answer;
 
 
-    Context context;
-
+Context context;
 
     public StringAdapter(Context context, List<TopicData> list) {
         super();
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.list = list;
+        this.context = context;
+
     }
 
     @Override
@@ -50,10 +57,11 @@ public class StringAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         LinearLayout view = (LinearLayout) inflater.inflate(R.layout.flascard_design, null);
-        tv_question = (TextView) view.findViewById(R.id.tv_question);
-        tv_answer = (TextView) view.findViewById(R.id.tv_answer);
+         tv_question = (TextView) view.findViewById(R.id.tv_question);
+         tv_answer = (TextView) view.findViewById(R.id.tv_answer);
         tv_question.setText(list.get(position).getQuestion());
         tv_answer.setText(list.get(position).getAnswer());
+
         container.addView(view);
         return view;
     }
@@ -63,6 +71,8 @@ public class StringAdapter extends PagerAdapter {
 
         ((ViewPager) container).removeView((View) object);
     }
+
+
 
 
 }
