@@ -1,4 +1,4 @@
-package com.example.noora.interviewprepguide.programmingLanguages.java.dataGenerator;
+package com.example.noora.interviewprepguide.programmingLanguages.java;
 
 import com.example.noora.interviewprepguide.R;
 import com.example.noora.interviewprepguide.model.LanguageData;

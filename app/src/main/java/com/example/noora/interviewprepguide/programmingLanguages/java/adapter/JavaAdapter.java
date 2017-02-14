@@ -13,6 +13,7 @@ import com.example.noora.interviewprepguide.HomePageActivity;
 import com.example.noora.interviewprepguide.R;
 import com.example.noora.interviewprepguide.model.LanguageData;
 import com.example.noora.interviewprepguide.programmingLanguages.java.JavaHomeScreenActivity;
+import com.example.noora.interviewprepguide.programmingLanguages.java.topics.string.string.StringActivity;
 
 import java.util.List;
 
@@ -71,7 +72,7 @@ public class JavaAdapter extends RecyclerView.Adapter<JavaAdapter.MyViewHolder> 
                             intent = new Intent(context, HomePageActivity.class);
                             break;
                         case 1:
-                            intent = new Intent(context, JavaHomeScreenActivity.class);
+                            intent = new Intent(context, StringActivity.class);
                             break;
                         default:
                             intent = new Intent(context, HomePageActivity.class);

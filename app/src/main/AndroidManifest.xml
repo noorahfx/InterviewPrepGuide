@@ -15,7 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".programmingLanguages.java.JavaHomeScreenActivity"></activity>
+        <activity android:name=".programmingLanguages.java.JavaHomeScreenActivity" />
+        <activity android:name=".programmingLanguages.java.topics.string.string.StringActivity" />
+        <activity android:name=".programmingLanguages.java.topics.string.array.ArrayActivity" />
+        <activity android:name=".programmingLanguages.java.topics.string.oop.OOPActivity"></activity>
     </application>
 
 </manifest>

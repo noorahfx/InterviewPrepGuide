@@ -6,11 +6,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.example.noora.interviewprepguide.R;
-import com.example.noora.interviewprepguide.adapter.MyAdapter;
-import com.example.noora.interviewprepguide.dataGenerator.ProgrammingLanguageGenerator;
 import com.example.noora.interviewprepguide.model.LanguageData;
 import com.example.noora.interviewprepguide.programmingLanguages.java.adapter.JavaAdapter;
-import com.example.noora.interviewprepguide.programmingLanguages.java.dataGenerator.JavaTopicsGenerator;
 
 import java.util.List;
 
